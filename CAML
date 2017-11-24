@@ -1,0 +1,22 @@
+
+type 'a arbre = noeud of 'a * 'a arbre vect | feuille of 'a ;;
+
+let rec aux fct tab = let l =ref [] and t = vect_length(tab)  in
+	
+	for i=0 to (t-1) do
+		l := (!l)@[fct(tab.(i))]
+			
+	done;
+	!l;;
+
+let  itliste f x liste = let t = ref (hd liste) and q = ref (tl liste) and l = ref x  and taille = list_length(liste) in
+
+	for i=0 to (taille-1) do
+	l := f((!l) (!t))
+	t:= hd (!q)
+	q := tl (!q)
+	
+	done;
+	(!l);;
+	
+
