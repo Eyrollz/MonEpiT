@@ -1,0 +1,231 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}      % un second package
+\usepackage[francais]{babel}  % un troisième package
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+
+\begin{document}
+
+
+\section{Topologie }
+
+\subsection{Rappels }
+
+
+
+\theoremstyle{plain}
+\newtheorem{theo} {\textcolor{red}{ Propriété }}[subsection]
+\begin{theo}
+$\mathbb{R}$ est archimédien, c'est-à-dire :\textcolor{blue}{ \[\forall (x,y) \in \mathbb{R}^{2} \ x> 0 \Rightarrow \exists n \in \mathbb{N} \   nx > y \]}
+
+\end{theo}
+
+\begin{theo}
+$\mathbb{Q}$ est dense dans $\mathbb{R}$ ie :\textcolor{blue}{ \[ \forall (x,y) \in \mathbb{R}^{2} \ \  x<y \  \Rightarrow \    \exists q \in \mathbb{Q} \ x<q<y \]}
+
+\end{theo}
+
+\begin{theo}
+Soit H un sous groupe de ($\mathbb{R}$,+), alors :\textcolor{blue}{
+\[ \exists a \in \mathbb{R^{+}} \ \ H= a\mathbb{Z} \   ou \ H \ est \ dense \ dans \ \mathbb{R}\]}
+
+\end{theo}
+\subsection{Convexité }
+
+\begin{theo}
+\[ Soit \ E \ un\  \mathbb{K}-espace \  vectoriel.\  Soit\  A \subset E\]
+ 
+On dit que A est une partie convexe de E lorsque :\textcolor{blue}{
+\[ \forall (x,y) \in A^{2} \ \exists \lambda \in [0,1] \ \ \lambda x + (1- \lambda) y \in A \]}
+\end{theo}
+
+
+\begin{theo}
+Il y a équivalence entre : \textcolor{blue}{
+\[(i) \   A \ est \ convexe \]
+\[(ii) \ \ \forall (x_{i})_{i \in \mathbb{N}} \in A^{n} \ \ 
+\forall (\lambda_{i})_{i \in \mathbb{N}} \in [0,1]^{n}
+\ \ \sum_{i=0}^{n}\lambda_{i} = 0 \ \Rightarrow \ \sum_{i=0}^{n} \lambda_{i}x_{i} \in A
+    \]}
+\end{theo}
+
+\begin{theo}
+\[Une\ intersection \ quelconque \ de\ parties\ convexes\ est\ convexe. \]
+\end{theo}
+
+\begin{theo}
+\[Les\ boules\ sont\ des\ parties\ convexes. \]
+\end{theo}
+
+\begin{theo}
+\textcolor{blue}{
+\[A\ est\ bornee \ \Leftrightarrow \ \exists r \in \mathbb{R}^{+*} \ \ A \subset B(0,r) \]}
+
+\end{theo}
+\subsection{Valeurs d'adhérence }
+\begin{theo}
+Une suite a une seule valeur d'adhérence : sa limite. \\
+Par contraposée, une suite qui possède deux valeurs d'adhérence ou plus diverge.
+
+\end{theo}
+
+\newtheorem{exo} {\textcolor{black}{ Exercice }}[subsection]
+\newtheorem{defi} {\textcolor{green}{ Définition }}[subsection]
+
+\begin{exo}
+Si $(u_{n})_{n \in \mathbb{N}} \in\mathbb{K}^{\mathbb{N}}$  est bornée et possède une unique valeur d'adhérence, alors elle converge.
+Démonstration par construction explicite de $\phi$.
+
+\end{exo}
+
+
+\begin{theo}
+Soit $(u_{n})_{n \in \mathbb{N}} \in{E}^{\mathbb{N}}$.
+Soit a\ $\in{E}$.\\
+Il y a équivalence entre :
+\textcolor{blue}{
+\[ (i)\ a\ est\ valeur\ d'aderence\ de\ (u_{n}). \]
+\[(ii)\ \forall \epsilon>0 \ \forall N \in \mathbb{N} \ \exists n \in \mathbb{N}\ \ (n\geq N\ \ et\ u_{n}\in\ \ B(a,\epsilon)\]}
+
+\end{theo}
+\subsection{Domination, équivalence }
+\begin{theo}
+Soit E un $\mathbb{K}$ espace vectoriel ,soit $ N_{1}$ et $N_{2}$ deux normes sur E.\\
+Il y a équivalence entre :
+\textcolor{blue}{
+\[(i) \  N_{2} \  domine \  N_{1}\]
+\[(ii) \ \exists r>0 \ B_{N_{2}}(0,1)\subset B_{N_{1}}(0,r)\]}
+
+\end{theo}
+
+\begin{theo}[Caractérisation séquentielle]
+Soit E un $\mathbb{K}$ espace vectoriel ,soit $ N_{1}$ et $N_{2}$ deux normes sur E.\\
+Il y a équivalence entre :
+\textcolor{blue}{
+\[(i) \  N_{2} \  domine \  N_{1}\]
+\[(ii) \ Toute\ suite\ convergeant\ vers\ 0\ au\ sens\ de\ N_{2}\ converge\ au\ sens\ de\ N_{1}. \]}
+\end{theo}
+
+\subsection{Topologie }
+
+
+\begin{defi}
+
+Soit a $\in$E . Soit V $\subset$E.\\
+On dit que V est un voisinage de a lorsqu'il existe r>0 tel que B(a,r) $\subset$ V.
+
+
+\end{defi}
+
+
+\subsubsection{Ouverts et Intérieur}
+\begin{theo}
+\textcolor{blue}{
+\[(1) \  E\ et\ \emptyset \ sont\ des\ ouverts. \]
+\[(2) \ Une\ union\ quelconque\ d'ouverts\ est\ un\ ouvert. \]
+\[(3) \  Une\ intersection\ finie\ d'ouverts\ est\ un\ ouvert. \]
+\[ (4) \ A=\overset{o}{A}\ \Leftrightarrow \ A\ est\ un\ ouvert.\]
+\[(5) \ A\subset B \Rightarrow \ \overset{o}{A}\subset\overset{o}{B} \]
+\[(6) \ \overset{o}{A\cap B} \ = \ \overset{o}{A}\cap \overset{o}{B} \]
+\[(7) \ \overset{o}{A}\cup \overset{o}{B} \ \subset \ \overset{o}{A\cup B} \]}
+
+\end{theo}
+
+
+
+
+\begin{theo}
+ Soit A $\subset$E. Soit a $\in$A .\\
+ Il y a équivalence entre :
+ \textcolor{blue}{
+\[ (i) \ a\in \overset{o}{A} \]
+\[(ii) \ il\ existe\ U\ ouvert\ de\ E\ tel\ que\ a\in U\ et\ U\subset A\]
+\[(iii) \ il\ existe\ r>0\ tel\ que\ B(a,r)\subset A\]}
+
+
+\end{theo}
+
+\subsubsection{Fermés et Adhérence}
+
+\begin{theo}
+\textcolor{blue}{
+\[(1) \  E\ et\ \emptyset \ sont\ des\ fermes. \]
+\[(2) \ Une\ union\ finie\ de\ ferme\ est\ un\ ferme. \]
+\[(3) \  Une\ intersection\ quelconque\ de\ fermes\ est\ un\ ferme. \]
+\[ (4) \ A=\overset{-}{A}\ \Leftrightarrow \ A\ est\ un\ ferme.\]
+\[(5) \ A\subset B \Rightarrow \ \overset{-}{A}\subset\overset{-}{B} \]
+\[(6) \ \overset{-}{A\cap B} \ = \ \overset{-}{A}\cap \overset{-}{B} \]
+\[(7) \ \overset{-}{A}\cup \overset{-}{B} \ = \ \overset{-}{A\cup B} \]}
+
+\end{theo}
+
+\begin{theo}
+ Soit A $\subset$E. Soit a $\in$E .\\
+ Il y a équivalence entre :
+ \textcolor{blue}{
+\[ (i) \ a\in \overset{-}{A} \]
+\[(ii) \ \forall \ V\in V(a) \ \ V\cap A \ne \emptyset\]
+\[(iii) \ \forall \ r>0 \ \ B_{f,o}(a,r)\cap A \ne \emptyset\]}
+
+
+\end{theo}
+
+\subsubsection{Densité etc}
+
+
+
+\begin{theo}
+
+ Soit A $\subset$E. 
+ \textcolor{blue}{
+ \[(i) \  \overset{-}{A}\ =\ \complement_{E}^{\overset{o}{\complement_{E}^{A}}} \]
+  \[(ii) \  \complement_{E}^{\overset{-}{A}}\ =\ \overset{o}{\complement_{E}^{A}} \]
+ }
+
+
+\end{theo}
+
+\begin{defi}
+
+Soit A $\subset$E . \\
+On dit que A est dense dans E lorsque $\overset{-}{A}$=E .
+
+\end{defi}
+
+
+\begin{theo}
+
+ Soit A $\subset$E. \\
+ \textcolor{blue}{
+ A est dense dans E $\leftrightarrow$ $\forall \  r>0\ \forall a \in E\ B(a,r)\cap A \ne \emptyset$  
+ }
+
+
+\end{theo}
+
+\begin{defi}
+
+Soit A $\subset$E . \\
+On appelle frontière de A la partie fr(A)=$\overset{-}{A} \setminus \overset{o}{A}$
+
+\end{defi}
+
+\begin{theo}
+
+ fr(a) est un fermé.
+
+\end{theo}
+
+
+
+
+
+
+
+\end{document}
+
+
+
